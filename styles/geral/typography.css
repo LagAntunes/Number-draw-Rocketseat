@@ -1,0 +1,109 @@
+/*Sora*/
+.display-large,
+.display-medium,
+.display-small {
+  line-height: 130%;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  font-family: "Sora", sans-serif;
+}
+
+.display-large {
+  font-size: 72px;
+
+  @media (max-width: 1023px) {
+    font-size: 52px;
+  }
+}
+
+.display-medium {
+  font-size: 40px;
+
+  @media (max-width: 1023px) {
+    font-size: 28px;
+  }
+}
+
+.display-small {
+  font-size: 32px;
+  font-weight: 700;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+  }
+}
+
+/*Roboto Mono*/
+.overline {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+
+  @media (max-width: 1023px) {
+    font-size: 14px;
+  }
+}
+
+/*Roboto Flex*/
+.paragraph-large,
+.paragraph-medium,
+.paragraph-small,
+.label-medium,
+.label-small {
+  line-height: 150%;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.paragraph-large,
+.paragraph-medium,
+.paragraph-small {
+  font-weight: 500;
+}
+
+.paragraph-large {
+  font-size: 16px;
+
+  @media (max-width: 1023px) {
+    font-size: 14px;
+  }
+}
+
+.paragraph-medium {
+  font-size: 14px;
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+  }
+}
+
+.paragraph-small {
+  font-size: 12px;
+
+  @media (max-width: 1023px) {
+    font-size: 10px;
+  }
+}
+
+.label-medium,
+.label-small {
+  font-weight: 700;
+}
+
+.label-medium {
+  font-size: 20px;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+  }
+}
+
+.label-small {
+  font-size: 16px;
+
+  @media (max-width: 1023px) {
+    font-size: 14px;
+  }
+}
