@@ -1,0 +1,25 @@
+@import url(../../../styles/geral/variables.css);
+
+.draw {
+  display: flex;
+  flex-direction: column;
+  max-width: 482px;
+  width: 100%;
+  height: auto;
+
+  & .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 40px;
+
+    & .label-medium {
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+
+    & .paragraph-large {
+      color: var(--content-secondary);
+    }
+  }
+}

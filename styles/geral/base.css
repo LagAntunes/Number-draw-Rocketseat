@@ -1,17 +1,52 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    background: var(--background-primary) url("../../assets/images/background.svg") no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background: var(--background-primary)
+    url("../../assets/images/background.svg") repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 0 134px 120px;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }

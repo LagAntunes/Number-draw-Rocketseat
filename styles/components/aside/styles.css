@@ -1,0 +1,50 @@
+@import url(../../../styles/geral/variables.css);
+
+aside {
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+  width: 100%;
+  height: auto;
+
+  & .overline {
+    background: var(--gradient-content);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+
+  & .display-large {
+    color: var(--content-primary);
+    margin-bottom: 50px;
+  }
+
+  & .rules {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding-left: 28px;
+      position: relative;
+
+      &::before {
+        content: url("/assets/icons/person-icon.svg");
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      & strong {
+        color: var(--content-brand);
+      }
+
+      & p {
+        color: var(--content-secondary);
+      }
+    }
+  }
+}

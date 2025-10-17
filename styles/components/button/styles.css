@@ -1,0 +1,63 @@
+@import url(../../../styles/geral/variables.css);
+
+.button-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 1.5px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-border);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    border-radius: inherit;
+    z-index: 0;
+    opacity: 0;
+    transition: background-position 0.3s ease-in-out;
+  }
+
+  & .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--background-tertiary);
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    & .label-medium {
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      animation: moveGradient 4s linear infinite;
+    }
+
+    & .button {
+      background-color: var(--background-secondary);
+    }
+  }
+}
+
+/*Animação*/
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}

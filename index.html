@@ -15,11 +15,102 @@
     <title>Sorteador de Números - Rocketseat</title>
   </head>
   <body>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-      reprehenderit, eos adipisci possimus perferendis cupiditate quo aut
-      doloribus, aspernatur et sit enim. Libero exercitationem accusantium earum
-      qui, laudantium perspiciatis eligendi!
-    </p>
+    <header>
+      <h1 class="display-small">numbers</h1>
+    </header>
+
+    <main>
+      <aside>
+        <span class="overline">Online - gratuito</span>
+        <h2 class="display-large">Sorteador de números</h2>
+        <ul class="rules">
+          <li>
+            <strong class="paragraph-medium"
+              >Como funciona o sorteador de números?</strong
+            >
+            <p class="paragraph-small">
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </li>
+          <li>
+            <strong class="paragraph-medium"
+              >Posso escolher o intervalo dos números?</strong
+            >
+            <p class="paragraph-small">
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </li>
+        </ul>
+      </aside>
+      <div class="draw">
+        <div class="text">
+          <strong class="label-medium">Quero sortear:</strong>
+          <p class="paragraph-large">
+            Defina a quantidade de números e o intervalo entre eles, clique em
+            "Sortear" e veja os resultados na tela. É rápido e fácil!
+          </p>
+        </div>
+
+        <form id="form-draw">
+          <fieldset>
+            <div class="input-wrapper">
+              <label for="numberTotal" class="label-small">números</label>
+              <input
+                type="number"
+                id="numberTotal"
+                class="display-small"
+                placeholder="0"
+                min="1"
+                max="100"
+                required
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="numberMin" class="label-small">de</label>
+              <input
+                type="number"
+                id="numberMin"
+                class="display-small"
+                placeholder="0"
+                min="1"
+                max="100"
+                required
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="numberMax" class="label-small">até</label>
+              <input
+                type="number"
+                id="numberMax"
+                class="display-small"
+                placeholder="0"
+                min="1"
+                max="100"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="checkbox" />
+            <div class="checkbox"></div>
+            <label for="checkbox" class="paragraph-small"
+              >Não repetir número</label
+            >
+          </div>
+
+          <div class="button-wrapper">
+            <button type="submit" class="button">
+              <span class="label-medium">Sortear</span>
+              <img src="./assets//icons/arrow-icon.svg" alt="arrow" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>

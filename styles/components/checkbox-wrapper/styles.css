@@ -1,0 +1,56 @@
+@import url(../../../styles/geral/variables.css);
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  margin-bottom: 40px;
+
+  & .checkbox {
+    width: 30px;
+    height: 20px;
+    border-radius: 16px;
+    background: var(--gradient-content);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: background 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 14px;
+      height: 14px;
+      background: var(--content-primary);
+      border-radius: 100%;
+      transition: left 0.3s ease-in-out;
+    }
+  }
+
+  & input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  & input:checked + .checkbox {
+    background: var(--gradient-background);
+  }
+
+  & input:checked + .checkbox::before {
+    left: 13px;
+  }
+
+  & .paragraph-small {
+    color: var(--content-primary);
+  }
+}
