@@ -1,12 +1,18 @@
 @import url(../../../styles/geral/variables.css);
 
 .button-wrapper {
+  max-width: 479px;
   width: 100%;
   height: auto;
   padding: 1.5px;
   border-radius: 8px;
+  margin: 0 0 20px;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1365px) {
+    margin: 0 auto 20px;
+  }
 
   &::before {
     content: "";
@@ -21,13 +27,13 @@
     transition: background-position 0.3s ease-in-out;
   }
 
-  & .button {
+  & .button,
+  & .restart-button {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 8px;
     width: 100%;
-    height: 56px;
+    min-height: 56px;
+    padding:  10px 20px;
     border-radius: 8px;
     background-color: var(--background-tertiary);
     position: relative;
@@ -35,8 +41,34 @@
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     & .label-medium {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
       color: var(--content-primary);
       text-transform: uppercase;
+    }
+  }
+
+  & .button {
+    & span {
+      &::after {
+        content: url("/assets/icons/arrow-icon.svg");
+        position: relative;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  & .restart-button {
+    & span {
+      &::after {
+        content: url("/assets/icons/reload-icon.svg");
+        position: relative;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
@@ -46,7 +78,8 @@
       animation: moveGradient 4s linear infinite;
     }
 
-    & .button {
+    & .button,
+    & .restart-button {
       background-color: var(--background-secondary);
     }
   }

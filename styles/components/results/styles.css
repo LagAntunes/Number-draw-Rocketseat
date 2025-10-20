@@ -1,0 +1,42 @@
+@import url(../../../styles/geral/variables.css);
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: auto;
+
+  & .result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    height: auto;
+
+    & .label-medium {
+      color: var(--content-primary);
+    }
+
+    & .paragraph-large {
+      color: var(--content-secondary);
+    }
+  }
+
+  & .selected-number {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    margin: 0 0 40px;
+
+    & li {
+      font-size: 40px;
+      color: var(--content-brand);
+    }
+  }
+}

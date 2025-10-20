@@ -26,6 +26,12 @@ main {
   width: 100%;
   height: auto;
   padding: 0 134px 120px;
+
+  @media screen and (max-width: 1365px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 40px 120px;
+  }
 }
 
 ul {
@@ -36,8 +42,13 @@ fieldset {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  width: fit-content;
   border: none;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+
+  @media screen and (max-width: 1365px) {
+    margin: 0 auto 20px;
+  }
 }
 
 input {

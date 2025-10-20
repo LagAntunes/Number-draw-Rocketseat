@@ -7,6 +7,14 @@ aside {
   width: 100%;
   height: auto;
 
+  @media screen and (max-width: 1365px) {
+    max-width: 100%;
+
+    & .display-large {
+      font-size: 35px;
+    }
+  }
+
   & .overline {
     background: var(--gradient-content);
     -webkit-background-clip: text;
